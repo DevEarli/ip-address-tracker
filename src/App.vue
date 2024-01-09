@@ -20,7 +20,7 @@ export default {
   methods: {
     async getData(search) {
       if (!search) return;
-      let url = `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_API_KEY}`;
+      let url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.VITE_API_KEY}`;
 
       if (isIP(search)) {
         url += `&ipAddress=${search}`;
